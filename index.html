@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRAKReTI</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="about.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-container"></div>
+    
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about-us">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="fixed-logo">
+        <img src="l.png" alt="PRAKReTI">
+    </div>
+
+    <main>
+        <section id="hero">
+            <h1>We will<br>help you<br><span class="highlight">save the planet</span></h1>
+        </section>
+
+        <section id="about-us" class="about-section">
+            <div class="container">
+                <div class="text-section">
+                    <h2>About us</h2>
+                    <p><strong>Prakreti</strong> is a clean tech startup dedicated to facilitating carbon financing using new-gen technology. We provide services of carbon credit registration, due diligence, project verification, digital MRV (Monitoring, Reporting, and Verification), and the integration of carbon credits into the blockchain (tokenization) for transparent pricing and global price discovery.</p>
+                </div>
+                <div class="image-section">
+                    <img src="1.png" alt="Prakreti team">
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services-section">
+            <h1>What we do</h1>
+            <div class="service-container">
+                <div class="service-item">
+                    <h2>Carbon credit project development</h2>
+                    <p>Advising project developers in project registration, development, certification, and trading to provide the best possible offers in the global carbon markets.</p>
+                    <img src="aa.png" alt="Project Development Icon" class="service-icon">
+                </div>
+                <div class="service-item">
+                    <h2>Digital MRV</h2>
+                    <p>Digital and automated MRV to revolutionize carbon monitoring for the verifiers. Measuring, reporting & verification (MRV), is the cornerstone of legitimate carbon credits issuance. But the industry is still run on Excel sheets & PDF files. Our automation solutions will result in 10x time reduction in verification per officer.</p>
+                    <img src="bb.png" alt="Digital MRV Icon" class="service-icon">
+                </div>
+                <div class="service-item">
+                    <h2>Carbon trading</h2>
+                    <p>PrakReti tokenizes carbon credits, which are certificates that represent a project's positive impact on the planet. Our platform will offer unique features like carbon pools, where similar carbon credits are pooled together and connected to decentralized finance apps. Carbon pools create liquidity and improve the ease of transacting in the environmental markets.</p>
+                    <img src="cc.png" alt="Carbon Trading Icon" class="service-icon">
+                </div>
+            </div>
+        </section>
+
+        <section id="partners">
+            <h2>Meet our Partners</h2>
+            <div class="partner-logos">
+                <img src="a.png" alt="Engineers Without Borders India">
+                <img src="UNF.jpg" alt="United Nations Foundation">
+                <img src="c.png" alt="Del Tech" class="small-logo">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="logo">
+            <img src="l.png" alt="PRAKReTI">
+        </div>
+        <div class="contact-info">
+            <div class="left-info">
+            </div>
+            <div class="center-info">
+                <p>Number: +91-9773816577</p>
+                <p>Email: save@prakreti.life</p>
+            </div>
+            <div class="right-info">
+                <p>Delhi Technological University,<br>
+                Shabad Daulatpur village, Rohini<br>
+                New Delhi, 110042</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Function to handle scrolling behavior and fixed elements
+        window.addEventListener('scroll', function() {
+            var header = document.querySelector('header');
+            var fixedLogo = document.querySelector('.fixed-logo');
+    
+            if (window.scrollY === 0) {
+                header.style.position = 'fixed';
+                header.style.background = 'transparent';
+                fixedLogo.style.display = 'block';
+                header.style.opacity = '1'; // Fully opaque when at the top
+            } else {
+                header.style.position = 'sticky'; // or 'fixed' based on your design preference
+                header.style.background = 'transparent'; // Change to your desired background color
+                fixedLogo.style.display = 'none'; // Ensure logo is always visible when scrolling down
+                header.style.opacity = '0'; // Adjust the opacity value as needed
+            }
+        });
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,156 @@
+/* contact.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --primary-color: #ffffff; /* White */
+    --secondary-color: #2ecc71;
+    --text-color: #ffffff; /* White */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-image: url('x.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: left;
+    padding: 0.5rem 1rem;
+    background: #000000; /* Black */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav ul li a {
+    color: var(--primary-color); /* White */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--secondary-color);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 30px;
+}
+
+#form-container, #confirmation-message {
+    max-width: 600px;
+    width: 100%;
+    padding: 3rem;
+    background: var(--form-background);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+#form-container:hover, #confirmation-message:hover {
+    transform: translateY(-5px);
+}
+
+#contact-form h2 {
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 2.5rem; /* Increased size */
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+    color: var(--primary-color);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    color: #000000; /* Black text for input fields */
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--secondary-color);
+    outline: none;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background: var(--secondary-color);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background: #27ae60; /* Darker shade of green */
+    transform: translateY(-2px);
+}
+
+#confirmation-message {
+    text-align: center;
+}
+
+#confirmation-message h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#form-container, #confirmation-message {
+    animation: fadeIn 0.5s ease-out;
+}
